@@ -1,0 +1,10 @@
+use_synth :piano
+x= 0.25
+b= 21
+play x
+
+87.times do
+  play b
+  sleep x
+  b= b+1
+end
