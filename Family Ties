@@ -1,0 +1,57 @@
+use_bpm 119
+live_loop :food do
+  use_synth :piano
+  
+  baby_keem = "C:/Users/Safiyyah Rawlins/Documents/Audacity/Sample 1.wav"
+  live_loop :sample1 do
+    sample baby_keem 
+    # measure 1
+    play :d5
+    sleep 0.5
+    play :e5
+    sleep 0.5
+    play :f5
+    sleep 2
+    play :e5
+    sleep 0.5
+    play :f5
+    sleep 0.5
+    
+    
+    #measure 2
+    play :f5
+    sleep 2
+    play :f5
+    sleep 1
+    play :f5
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :e5
+    sleep 0.5
+    
+  end
+  #measure 3
+  play :d5
+  sleep 0.5
+  play :e5
+  sleep 0.5
+  play :f5
+  sleep 2
+  play :e5
+  sleep 0.5
+  play :f5
+  sleep 0.5
+  
+  #measure 4
+  play :f5
+  sleep 2
+  play :f5
+  sleep 1
+  play :f5
+  sleep 0.5
+  play :d5
+  sleep 0.5
+  play :e5
+  sleep 0.5
+end
