@@ -4,7 +4,7 @@ live_loop :food do
   
   baby_keem = "C:/Users/Safiyyah Rawlins/Documents/Audacity/Sample 1.wav"
   live_loop :sample1 do
-    sample baby_keem 
+    sample baby_keem
     # measure 1
     play :d5
     sleep 0.5
@@ -55,3 +55,4 @@ live_loop :food do
   play :e5
   sleep 0.5
 end
+
