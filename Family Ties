@@ -1,3 +1,84 @@
+use_bpm 119
+use_synth :piano
+baby_keem = "C:/Users/Safiyyah Rawlins/Documents/Audacity/sample 1.wav"
+nice_sample ="C:/Users/Safiyyah Rawlins/Downloads/sample 1.wav"
+good_sample ="C:/Users/Safiyyah Rawlins/Documents/Audacity/other sample.wav"
+
+
+a=1
+
+define :func do
+  play :f5
+  sleep 2
+end
+with_fx :reverb do
+  1.times do
+    print("sample2")
+    sample nice_sample, amp: 3, sustain: 3
+    sleep 3
+    x=x+1
+    
+  end
+  define :paramfunc do |a|
+    sample a
+    play :f5
+    sleep 1
+    play :f5
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :e5
+    sleep 0.5
+  end
+  
+  paramfunc good_sample
+  live_loop :sample1 do
+    sample baby_keem
+    
+    # measure 1
+    play :d5
+    sleep 0.5
+    play :e5
+    sleep 0.5
+    func
+    play :e5
+    sleep 0.5
+    play :f5
+    sleep 0.5
+    
+    sample a
+    play :f5
+    sleep 1
+    play :f5
+    sleep 0.5
+    play :d5
+    sleep 0.5
+    play :e5
+    sleep 0.5
+    
+    play :d5, amp: 1
+    sleep 0.5
+    play :e5, amp: 2
+    sleep 0.5
+    play :f5, amp: 3
+    sleep 2
+    play :e5, amp: 4
+    sleep 0.5
+    play :f5, amp: 5
+    sleep 0.5
+    
+    play :f5, amp: 0.5
+    sleep 2
+    play :f5, amp: 1
+    sleep 1
+    play :f5, amp: 1.5
+    sleep 0.5
+    play :d5, amp: 2
+    sleep 0.5
+    play :e5, amp: 2.5
+    sleep 0.5
+  end
+end
 use_bpm 88
 use_synth :piano
 good_sample ="C:/Users/Safiyyah Rawlins/Documents/Audacity/sample2.wav"
